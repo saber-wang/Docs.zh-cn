@@ -302,7 +302,7 @@ ASP.NET Core 应用不生成 antiforgery 令牌进行安全的 HTTP 方法 （GE
 * 选项
 * TRACE
 
-我们建议使用`AutoValidateAntiforgeryToken`广泛用于非 API 方案。 这可确保默认被保护 POST 操作。 替代方法是忽略防伪令牌，默认情况下，除非`ValidateAntiForgeryToken`应用于各个操作方法。 它更有可能在此方案中保留的 POST 操作方法不受保护错误地使应用程序容易受到 CSRF 攻击。 所有帖子应都发送防伪令牌。
+我们建议使用`AutoValidateAntiforgeryToken`广泛用于非 API 方案。 这可确保默认被保护 POST 操作。 替代方法是忽略防伪令牌，默认情况下，除非`ValidateAntiForgeryToken`应用于各个操作方法。 它更有可能在此方案中保留的 POST 操作方法不受保护错误地使应用程序容易受到 CSRF 攻击。 所有Post请求都应发送防伪令牌。
 
 Api 没有发送令牌的非 cookie 一部分的自动机制。 实现可能取决于客户端代码实现。 一些示例如下所示：
 
